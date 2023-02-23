@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 4000;
 
 //console.log(process);
 
+app.get('/', (req, res) => {
+	res.send('<h1>Render Node Server</h1>');
+});
+
 app.get('/weather', async (req, res) => {
 	// proxy server
 	// cannot use fetch here - not available inside the node -> axios
